@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function FormGrp() {
     const [showPhoneNumberInput, setShowPhoneNumberInput] = useState(false);
-    const[showEmailIdInput, setEmailIdInput] = useState(false);
+    const [showEmailIdInput, setEmailIdInput] = useState(false);
     const handlePhoneNumber = () => {
         const classList = localStorage.classList;
         if (classList) {
@@ -37,7 +37,7 @@ function FormGrp() {
                     <div className="col-sm-6 form-group pt-3">
                         <label>How should we contact you?</label>
                         <div className="dropdown">
-                            <div className="dropdown-toggle form-control dropdown-toggle" type="text" data-toggle="dropdown" aria-expanded="false">
+                            <div className="dropdown-toggle form-control dropdown-toggle " type="text" data-toggle="dropdown" aria-expanded="false">
                                 Choose Option
                             </div>
                             <div className="dropdown-menu">
@@ -46,14 +46,14 @@ function FormGrp() {
                             </div>
                         </div>
                     </div>
-                    {showPhoneNumberInput ? (
+                    {showPhoneNumberInput &&(
                         <div className="col-sm-6 pt-3">
                             <label>Phone Number</label>
-                            <input type="text" className="form-control" placeholder="Phone number" />
-                        </div>) : null}
+                            <input type="text" className="form-control" placeholder="Enter Number" />
+                        </div>)}
                     {showEmailIdInput && (<div className="col-sm-6 pt-3">
                         <label>Email Id</label>
-                        <input type="email" className="form-control" placeholder="Email Id" />
+                        <input type="email" className="form-control" placeholder="Enter Email Id" />
                     </div>)}
                 </div>
             </form>

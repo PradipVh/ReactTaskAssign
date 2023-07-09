@@ -1,10 +1,10 @@
-import Task2A from "./task2A/Main";
+import Task from "./task/Main";
 
  
 function App() {
   return (
     <div>
-      <Task2A/>
+      <Task/>
 
     </div>
   );
